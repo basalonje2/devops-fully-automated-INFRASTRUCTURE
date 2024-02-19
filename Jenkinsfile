@@ -10,7 +10,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning project codebase...'
-                git branch: 'main', url: 'https://github.com/cvamsikrishna11/devops-fully-automated-infra.git'
+                git branch: 'main', url: 'https://github.com/basalonje2/devops-fully-automated-INFRASTRUCTURE.git'
                 sh 'ls'
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage('Terraform init') {
             steps {
                 echo 'Initiliazing terraform project...'
-                sh 'sudo terraform init'
+                sh 'terraform init'
                
             }
         }
@@ -35,7 +35,7 @@ pipeline {
         stage('Terraform validate') {
             steps {
                 echo 'Code syntax checking...'
-                sh 'sudo terraform validate'
+                sh 'terraform validate'
                
             }
         }
