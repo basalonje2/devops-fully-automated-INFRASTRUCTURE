@@ -79,7 +79,7 @@ pipeline {
                 sh 'sudo terraform apply --auto-approve'
                
             }
-        // }
+        }
         
         //  stage('Terraform destroy') {
         //      steps {
